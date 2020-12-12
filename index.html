@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- https://medium.com/the-andela-way/understanding-css-flexbox-87cddcd3d1e4 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+
+            display: flex;
+            /* default flex-direction is row */
+            flex-direction: row; /*it is defining main-axis*/
+            justify-content: space-between;
+            /* it sets child along main axis */
+            align-items : center;
+            /* height: 200px; */
+            width: 100%;
+            background-color: lightgray;
+            flex-wrap: wrap;
+        }
+        .container::after {
+            content:"";
+            flex:1 1 auto;
+        }
+        .container div {
+            width: 33.33%;
+            height:90px;
+            min-width: 100px;
+        }
+        .red {
+            background-color: red;
+            /* height: 50px; */
+            
+        }
+        .blue {
+            background-color: blue;
+            /* height: 80px; */
+        }
+        .green {
+            background-color: green;
+            /* height: 70px; */
+        }
+        .purple {
+            background-color: purple;
+            /* height: 40px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="red">
+
+        </div>
+        <div class="green"></div>
+        <div class="purple"></div>
+        <div class="blue"></div>
+        <div class="red"></div>
+        <div class="green"></div>
+        <div class="purple"></div>
+        <div class="blue"></div>
+    </div>
+</body>
+
+</html>
